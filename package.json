@@ -1,0 +1,17 @@
+{
+  "name": "electron-translators",
+  "version": "1.0.0",
+  "description": "A list of folks who have helped translate Electron's documentation",
+  "main": "translators.json",
+  "repository": "https://github.com/electron-translators",
+  "author": "Zeke Sikelianos <zeke@sikelianos.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv-safe": "^4.0.4",
+    "github": "^9.2.0",
+    "limiter": "^1.1.0"
+  },
+  "scripts": {
+    "build": "node build.js > translators.json"
+  }
+}
