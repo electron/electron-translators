@@ -7,6 +7,10 @@ This data is being collected so we can:
 1. Acknowledge these translators and thank them for their contributions
 1. Invite the translators to participate in a more formal and organized Electron localization effort.
 
+## The Translators
+
+See [translators.json](translators.json)
+
 ## The Old Way
 
 There's a
