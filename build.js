@@ -5,6 +5,7 @@ const path = require('path')
 const GitHub = require('github')
 const {RateLimiter} = require('limiter')
 const limiter = new RateLimiter((5000 / 60 / 60), 'second')
+const hubbers = 'zeke kevinsawicki zcbenz vanessayuen jkleinsc groundwater'.split(' ')
 const github = new GitHub({
   debug: false
 })
@@ -39,6 +40,7 @@ locales.forEach(locale => {
           commits.data.forEach(commit => {
             if (commit && commit.author && commit.author.login) {
               const login = commit.author.login
+              if (hubbers.includes(login)) return
               console.error(`${locale} -> ${login}`)
               if (!translators[locale].includes(login)) translators[locale].push(login)
             }
